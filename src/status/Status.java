@@ -5,6 +5,8 @@
  */
 package status;
 
+
+
 import java.util.Scanner;
 
 /** This class takes String input from user 
@@ -16,6 +18,7 @@ import java.util.Scanner;
  * then print the status details. 
  * @author srinivsi 
  */
+
 public class Status {
 
     /**
@@ -25,7 +28,8 @@ public class Status {
     {
     Scanner in =new Scanner(System.in);
     System.out.println("Enter the user status code (zero,one,two,three) in string");
-    String code = in.next();
+    
+    statusCode code = statusCode.valueOf(in.next().toUpperCase());
     StausUser t= new StausUser();
     t.statusDetail(code); 
     }
